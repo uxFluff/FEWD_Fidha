@@ -1,0 +1,585 @@
+<html>
+    <head>
+        <title>Semantic Dep Website</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            h1{
+                text-align: center;
+                background-color: black;
+                padding-top: 15px;
+                color: white;
+            }
+            nav{
+                background-color: black;
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+                padding-bottom: 25px;
+                padding-top: 25px;
+                color: white;
+                width: 100%;
+
+            }
+            #welcome{
+                background-color: aliceblue;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                padding-top: 70px;
+                font-size: 50px;
+                color: darkblue;
+                padding-bottom: 70px;
+            }
+            section{
+                background-color: aliceblue;
+                height:670px;
+
+            }
+            p{
+                padding-top: 80px;
+                text-align: center;
+            }
+            h2{
+                text-align: center;
+                margin-bottom: 20px;
+
+            }
+            h3{
+                text-align: center;
+            }
+            .about{
+                color:white;
+                background-color: black;
+            }
+            .sec2{
+                background-color: black;
+                height: 850px;
+            }
+            .aboutp{
+                color: white;
+                padding-top: 30px;
+            }
+            .vision{
+                color: white;
+                padding-top: 50px;
+                text-align: center;
+            }
+            .visionp{
+                color: white;
+                padding-top: 20px;
+            }
+            .mission{
+                color: white;
+                padding-top: 50px;
+                text-align: center;
+            }
+            .missionp{
+                color: white;
+                padding-top: 20px;
+            }
+            .obj{
+                color: white;
+                text-align: center;
+                padding-top: 50px;
+            }
+            .objp{
+                color: white;
+                padding-top: 20px;
+            }
+            #courses{
+                background-color: beige;
+                height: 780px;
+            }
+            #c1{
+                background-color: darkcyan;
+                width: 200px;
+                height: 200px;
+            }
+            #c2{
+                background-color: rgb(0, 184, 184);
+                width: 200px;
+                height: 200px;
+            }
+            #c3{
+                background-color: rgb(0, 255, 255);
+                width: 200px;
+                height: 200px;
+
+            }
+            #parent{
+                display: flex;
+                justify-content: space-around;
+            }
+            .course{
+                background-color: aliceblue;
+                text-align: center;
+                color: black;
+                padding-top: 90px;
+            }
+            #courses{
+                background-color: aliceblue;
+                height: 800px;
+            }
+            #d1{
+                background-color: darkorchid;
+                width: 200px;
+                height: 200px;
+            }
+            #d2{
+                background-color: rgb(86, 27, 116);
+                width: 200px;
+                height: 200px;
+            }
+            #d3{
+                background-color: rgb(35, 9, 47);
+                width: 200px;
+                height: 200px;
+            }
+            #parent2{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 100px;
+
+            }
+            table{
+                border-collapse: collapse;
+                width: 100%;
+                text-align: center;
+                height: 300px;
+            }
+            .timet{
+                height: 800px;
+                background-color: blanchedalmond;
+            }
+            img{
+               width: 300px;
+                height: 200px;
+                border: 2px solid black; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px black;
+
+                
+            }
+            #parent3{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2px;
+            }
+            
+            .time{
+                background-color: blanchedalmond;
+                color: black;
+                padding-top: 70px;
+            }
+        
+            .ach{
+                background-color: black;
+                height: 1400px;
+            }
+            .pa{
+                color: white;
+            }
+            .ps{
+                padding-top: 50px;
+                color: white;
+            }
+            .achieve{
+                padding-top: 60px;
+            }
+            #parent4{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2px;
+            }
+            #parent5{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2px;
+            }
+            .fa{
+                color: white;
+                padding-top: 100px;
+            }
+            .e{
+                color: white;
+                padding-top: 100px;
+            }
+            .events{
+                height: 1200px;
+            }
+            .eve{
+                color: black;
+                background-color: aliceblue;
+                padding-top: 60px;
+            }
+            #parent6{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2px;
+            }
+            .work{
+                padding-top: 50px;
+                
+            }
+            .semi{
+                padding-top: 50px;
+            }
+            #parent7{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2px;
+            }
+            .hack{
+                padding-top: 50px;
+
+            }
+            .parent8{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2px;
+            }
+            .contacts{
+                background-color: black;
+                height: 800px;
+            }
+            .cont{
+                padding-top: 50px;
+            }
+            
+            .ach1{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach2{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach3{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach4{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach5{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach6{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach7{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach8{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .ach9{
+                width: 300px;
+                height: 200px;
+                border: 2px solid white; 
+                border-radius: 20px;
+                box-shadow: 4px 8px 10px white;
+            }
+            .pcontact{
+                color: white;
+
+            }
+            .email{
+                color: white;
+                padding-top: 50px;
+                padding-bottom: 5px;
+                height: 10px;
+                
+
+            }
+            .send{
+                color: white;
+            }
+            .phone{
+                color: white;
+            }
+            #parent{
+                animation: move 5s ease alternate infinite;
+            }
+            @keyframes move{
+                from{
+                    transform: scale(0.5)
+                }
+                to{
+                    transform: scale(1)
+                }
+            }
+            /* @media (max-width: 600px){ */
+                /* body{
+                    width: 100%;
+                }
+                    
+                *{
+                    width: 100%;
+
+                } */
+                /* header{
+                    width: 1000px;
+                    
+                }
+                section{
+                    width: 1000px;
+                }
+
+
+            } */
+            /* @media (min-width:600px){
+                header{
+                    width: 2000px;
+                }
+                section{
+                    width: 2000px;
+                }
+            } */
+
+
+
+            
+           
+            
+
+            ;
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Semantic Dep Website</h1>
+
+            <nav>
+                <li>Home</li>
+                <li>About Department</li>
+                <!-- <li>Faculty</li> -->
+                <li>Courses</li>
+                <li>Time Table</li>
+                <li>Achievements</li>
+                <li>Events</li>
+                <li>Contact</li>
+            </nav>
+        </header>
+
+        <!-- HOME -->
+         <section>
+            <p>A college is more than classrooms, courses, and examinations; it is a place where ideas, skills, experiences, and opportunities come together. This website is designed to bring that environment online in a simple and accessible way. It gives students and visitors a glimpse into the college’s academic life, achievements, activities, facilities, and day-to-day schedule. Rather than simply listing information, the website aims to present the college as an active community where students learn, participate, create, and grow.</p>
+            <h1 id="welcome">WELCOME NEW BCA BATCH</h1> 
+            <h2>HIGHLIGHTS</h2>
+            <div id="parent">
+                <img src="./pavanprasad_ind-kids-7426792_1920.jpg" alt="">
+                <img src="felixioncool-lecture-385357_1920.jpg" alt="">
+                <img src="./12019-steven-spielberg-84788_1920.jpg" alt="">
+            </div>
+
+         </section>
+
+         <!-- ABOUT -->
+         <section class="sec2">
+            <h1 class="about">ABOUT DEPARTMENT</h1>
+            <p class="aboutp">The programme is designed to provide students with a thorough and in-depth understanding of various facets within the field of computer science and applications. The curriculum emphasizes a rigorous academic approach, covering core computer science topics such as programming languages (C++, Java, Python), data structures, algorithms, and software engineering principles. Starting from the third semester, the program delves into specialized areas like Graphics and Animation, Game Development, UI and UX Design, VR and AR, Computer Animation, and Computer Vision. These modules offer a comprehensive exploration of concepts, techniques, and tools, ensuring students are well-equipped for the dynamic and evolving landscape of the computing industry.
+                Additionally, the programme integrates hands-on project work, where students engage in practical projects related to game development, graphics design, or other relevant areas. Collaborative projects, including the design and implementation of games or graphics applications, provide students with valuable teamwork experience.
+                Furthermore, the curriculum emphasizes real-world exposure through internships and industry projects with gaming studios, animation companies, or IT firms specializing in graphics technology. This holistic approach ensures that graduates emerge not only with theoretical knowledge but also with practical skills and industry-ready expertise.</p>
+            
+            <h2 class="Vision">VISION</h3>
+            <p class="visionp">To be a world-class University that nurtures talent and catalytically transforms the lives of millions through excellence in teaching, research, service and community development. To uphold a commitment to shaping lives through scholarly teaching and learning, and that which contributes to an equitable and holistic transformation of society at large.
+
+            </p>
+            <h2 class="mission">MISSION</h3>
+            <p class="missionp">To create and sustain a community of lifelong learners in an environment that emphasizes literacy, critical thinking and humanistic and scientific inquiry.
+
+                The University shall provide a dynamic, challenging and ethical environment for pursuing high-quality teaching, research, learning and service across all areas of the University, where students, faculty and other key constituents can interact, collaborate, and partner with the global community for the creation and dissemination of knowledge and transform the lives of people through innovation and excellence in higher education.</p>
+
+            <h2 class="obj">OBJECTIVES</h3>
+            <p class="objp">The objective of the college is to provide students with quality education while encouraging them to develop practical skills, creativity, and independent thinking. It aims to create an environment where students can explore their interests, participate in academic and extracurricular activities, and prepare themselves for future opportunities. The college focuses on developing responsible, skilled, and confident individuals who can adapt to changing professional environments and contribute positively to society. It also encourages innovation, collaboration, and continuous learning as essential parts of student development.</p>
+        </section>
+
+
+         <!-- FACULTY -->
+
+
+         <!-- COURSES -->
+         <section id="courses">
+            <h1 class="course">COURSES</h1>
+            <p>The programme is designed to provide students with a thorough and in-depth understanding of various facets within the field of computer science and applications. The curriculum emphasizes a rigorous academic approach, covering core computer science topics such as programming languages (C++, Java, Python), data structures, algorithms, and software engineering principles. Starting from the third semester, the program delves into specialized areas like Graphics and Animation, Game Development, UI and UX Design, VR and AR, Computer Animation, and Computer Vision. These modules offer a comprehensive exploration of concepts, techniques, and tools, ensuring students are well-equipped for the dynamic and evolving landscape of the computing industry.
+
+            Additionally, the programme integrates hands-on project work, where students engage in practical projects related to game development, graphics design, or other relevant areas. Collaborative projects, including the design and implementation of games or graphics applications, provide students with valuable teamwork experience.
+
+            Furthermore, the curriculum emphasizes real-world exposure through internships and industry projects with gaming studios, animation companies, or IT firms specializing in graphics technology. This holistic approach ensures that graduates emerge not only with theoretical knowledge but also with practical skills and industry-ready expertise.</p>
+                <div id="parent2">
+                <img src="./51581-robot-3010309_1920.jpg" alt="">
+                <img src="./as_photography-digital-marketing-1433427_1920.jpg" alt="">
+                <img src="./hatifulihsanyosa-gaming-console-7249447.jpg" alt="">
+            </div>
+
+         </section>
+         <!-- TIME TABLE -->
+          <section class="timet">
+            <h1 class="time">TIME TABLE </h1>
+            <p>The Timetable section of the college website provides students and faculty with an organized view of the academic schedule. It includes details such as class timings, subjects, faculty sessions, breaks, and working days. The timetable is presented in a clear and structured format, allowing students to quickly access their daily and weekly schedules. This section helps improve time management, reduces confusion regarding class timings, and provides convenient access to important academic information through the college website.</p>
+            <br><br>
+            <table border="1px">
+                <tr>
+                    <th>Days</th>
+                    <th>1-2pm</th>
+                    <th>2-3pm</th>
+                    <th>3-4pm</th>
+                    <th>4-5pm</th>
+                    <th>5-6pm</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Front-End Web Development</td>
+                    <td>Computer Graphics</td>
+                    <td>Mobile Application Development</td>
+                    <td>Networking & Security</td>
+                    <td>IES</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Front-End Web Development</td>
+                    <td>Computer Graphics</td>
+                    <td>Mobile Application Development</td>
+                    <td>Networking & Security</td>
+                    <td>IES</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Mobile Application Development</td>
+                    <td>Front-End Web Development/LAB</td>
+                    <td>Front-End Web Development/LAB</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Front-End Web Development</td>
+                    <td>Computer Graphics</td>
+                    <td>Mobile Application Development</td>
+                    <td>Networking & Security</td>
+                    <td>IES</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Networking & Security</td>
+                    <td>Computer Graphics</td>
+                    <td>IES</td>
+                    <td>Front-End Web Development</td>
+                    <td>Mobile Application Development</td>
+                </tr>
+            </table>
+          </section>
+
+          <!-- ACHIEVEMENTS -->
+
+          <section class="ach">
+            <h1 class="achieve">ACHIEVEMENTS</h1>
+            <p class="pa">The Achievements section of the college website highlights the academic, cultural, sporting, and professional accomplishments of the institution and its students. It showcases awards, recognitions, competition victories, research achievements, and other notable milestones that reflect the college’s commitment to excellence. This section provides visitors with an overview of the achievements that contribute to the institution’s reputation and encourages students to participate in various activities. It also serves as a platform to celebrate and present the accomplishments of the college community.</p>
+            <h2 class="ps">STUDENT ACHIEVEMENTS</h2>
+
+            <div id="parent3">
+                <img class="ach1" src="./christianesteve-rugby-4085868.jpg" alt="">
+                <img class="ach2" src="./cyberco-startup-founder-10161027_1920.png" alt="">
+                <img class="ach3" src="./this_is_engineering-woman-8499959_1920.jpg" alt="">
+            </div>
+
+            <h2 class="fa">FACULTY ACHIEVEMENTS</h2>
+            
+            <div id="parent4">
+                <img class="ach4" src="./12019-steven-spielberg-84788_1920.jpg" alt="">
+                <img class="ach5" src="./kaboompics-man-791049_1920.jpg" alt="">
+                <img class="ach6" src="./lodgelink-crew-travel-9952174_1920.jpg" alt="">
+            </div>
+
+            <h2 class="e">PROGRAMS</h2>
+            
+            <div id="parent5">
+                <img class="ach7" src="./career fair.png" alt="">
+                <img class="ach8" src="./pavanprasad_ind-kids-7426792_1920.jpg" alt="">
+                <img class="ach9" src="./freelancegrafiker-coding-3822283_1920.jpg" alt="">
+            </div>
+
+          </section>
+
+          <!-- EVENTS -->
+
+          <section class="events">
+            <h1 class="eve">EVENTS</h1>
+            <p>The Events section highlights the various academic, cultural, technical, and extracurricular activities conducted by the college throughout the year. It provides students and visitors with an overview of workshops, seminars, competitions, festivals, conferences, and other campus activities. These events offer students opportunities to learn beyond the classroom, develop new skills, interact with others, and explore their interests. The section also reflects the active campus environment of the college and showcases the diverse experiences and opportunities available to students.</p>
+            <h2 class="work">WORKSHOPS</h2>
+            <div id="parent6">
+                <img src="./corecreato-resin-9084061_1920.jpg" alt="">
+                <img src="./wal_172619-pottery-8026824_1920.jpg" alt="">
+                <img src="./theaflowers-soldering-7897827.jpg" alt="">
+            </div>
+
+            <h2 class="semi">SEMINARS</h2>
+            <div id="parent7">
+                <img src="./felixioncool-lecture-385357_1920.jpg" alt="">
+            </div>
+
+            <h2 class="hack">HACKATHONS</h2>
+            <div class="parent8">
+                <img src="./mitrey-computer-6133070_1920.jpg" alt="">
+            </div>
+
+          </section>
+
+
+          <!-- CONTACT -->
+           <section class="contacts">
+            <h1 class="cont">CONTACT</h1>
+            <p class="pcontact">We are always happy to assist students, parents, prospective applicants, and visitors with their questions and enquiries. Whether you need information about admissions, academic programs, campus facilities, events, or general services, our team is available to help. Reach out to us through any of the contact details below or use the enquiry form to send us a message.</p>
+            <h2>SEND US A MESSAGE!</h2>  
+            <p class="send">Have a question or need more information? Get in touch with our college administration through the contact details below. Our team will be happy to assist you with enquiries related to admissions, academics, campus facilities, events, and other college services.</p>
+            <div class="email">
+            <p class="email">Email: info@college.edu</p>
+            </div>
+            <p class="phone">Phone no.: +91 XXXXX XXXXX</p>
+            
+           </section>
+
+         
+         
+    </body>
+</html>
