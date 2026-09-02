@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>CSS Transitions and Animations</title>
+        <style>
+            button{
+                background-color: lightblue;
+                padding: 5px;
+                margin: 5px;
+                border: none;
+                border-radius: 10px;
+                transition: background-color 1s ease;
+
+            }
+            button:hover{
+                background-color: lightpink;
+            }
+            .box{
+                height: 200px;
+                width: 200px;
+                background-color: rgb(255, 152, 114);
+                /* animation-name: move;
+                animation-duration: 5s;
+                animation-delay: 1s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite; */
+                animation:move 5s ease alternate infinite ;
+            }
+            @keyframes move{
+                from{
+                    transform: scale(0);
+                }
+                to{
+                    transform: scale(0.5);
+                }
+            }
+            .box:hover{
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Transitions and Animations</h1>
+        <button>Animation</button> <br><br>
+
+        <div class="box">
+            
+
+        </div>
+
+    </body>
+</html>
