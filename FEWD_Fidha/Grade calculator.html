@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>Grade Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: beige;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin: 5px;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        #reset {
+            background-color: tomato;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .box1 {
+            background-color: rgb(221, 221, 255);
+            width: 500px;
+            margin-left:400px;
+            margin-top: 100;
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 2px 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box1">
+
+    <h2>Grade Calculator</h2>
+
+    Name: <input type="text" id="name"><br>
+
+    Subject 1: <input type="number" id="m1"><br>
+
+    Subject 2: <input type="number" id="m2"><br>
+
+    Subject 3: <input type="number" id="m3"><br>
+
+    <button onclick="calculate()">Calculate</button>
+    <button id="reset" onclick="reset()">Reset</button>
+
+</div>
+
+<div id="result"></div>
+
+<script>
+
+function calculate() {
+
+    var name = document.getElementById("name").value;
+
+    var m1 = Number(document.getElementById("m1").value);
+    var m2 = Number(document.getElementById("m2").value);
+    var m3 = Number(document.getElementById("m3").value);
+
+    var total = m1 + m2 + m3;
+
+    var average = total / 3;
+
+    var percentage = average;
+
+    var grade = "";
+
+    if (percentage >= 90) {
+        grade = "A";
+    } 
+    else if (percentage >= 75) {
+        grade = "B";
+    } 
+    else if (percentage >= 50) {
+        grade = "C";
+    } 
+    else {
+        grade = "Fail";
+    }
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name + "<br>" +
+        "Total: " + total + "<br>" +
+        "Average: " + average.toFixed(2) + "<br>" +
+        "Percentage: " + percentage.toFixed(2) + "%<br>" +
+        "Grade: " + grade;
+}
+
+function reset() {
+
+    document.getElementById("name").value = "";
+    document.getElementById("m1").value = "";
+    document.getElementById("m2").value = "";
+    document.getElementById("m3").value = "";
+    document.getElementById("result").innerHTML = "";
+
+}
+
+</script>
+
+</body>
+</html>

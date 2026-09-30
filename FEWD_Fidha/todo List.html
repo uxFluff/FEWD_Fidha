@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>To Do List</title>
+        <head>
+            <style>
+                body{
+                    /* background-color: aliceblue; */
+                    background-image: linear-gradient(rgb(195, 195, 255), rgb(130, 128, 249),rgb(76, 61, 246));
+                }
+                h1{
+                    color: black;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+                }
+                .box{
+                    background-color: whitesmoke;
+                    width: 500px;
+                    /* height: 200px; */
+                    padding: 30px;
+                    margin: auto;
+                    text-align: center;
+                    margin-top: 150px;
+                    border-radius: 15px;
+                    border: 0.2px solid black;
+                    box-shadow: 0 0 10px black;
+                }
+                input{
+                    height: 50px;
+                    width: 300px;
+                    border-radius: 0%;
+                    border: none;
+
+                }
+                ::placeholder{
+                    text-align: center;
+                }
+                
+                /* button{
+                    border: none;
+                    height: 50px;
+                    width: 200px;
+                } */
+
+                .b1{
+                    border: none;
+                    height: 50px;
+                    width: 200px;
+                    background-color: rgb(125, 197, 97);
+                    color: white;
+                    transition: background-color 1s ease;
+                }
+                .b1:hover{
+                    background-color: white;
+                    color: black;
+                }
+                .b2{
+                    border: none;
+                    height: 50px;
+                    width: 200px;
+                    background-color: rgb(198, 89, 89);
+                    color: white;
+                    transition: background-color 1s ease;
+                }
+                .b2:hover{
+                    background-color: white;
+                    color: black;
+                }
+                
+
+            </style>
+        </head>
+        <body>
+            <div class="box">
+            <h1>To Do List Application</h1>
+
+            <input type="text" id="taskInput" placeholder="Enter a Task"> <br> <br>
+            <button class="b1" onclick="addTask()">Add Task</button> <br><br>
+
+            <ul id="taskList"></ul>
+
+            <button class="b2" onclick="clearCompleted()">Clear Completed</button>
+
+            <script>
+                function addTask(){
+                    let task= document.getElementById("taskInput").value;
+
+                    if (task==""){
+                        alert("Please enter a task!");
+                        return;
+                    }
+                    let li=document.createElement("li");
+                    li.innerHTML=task+
+                    "<button onClick='completeTask(this)'>Complete</button>"+
+                    "<button onClick='deleteTask(this)'>Delete</button>";
+
+                    document.getElementById("taskList").appendChild(li);
+                    document.getElementById("taskInput").value="";
+
+                }
+
+                function completeTask(button){
+                    button.parentElement.style.textDecoration = "line-through";
+                }
+
+                function deleteTask(button){
+                    button.parentElement.remove();
+                }
+
+                function clearCompleted(){
+                    let tasks=document.querySelectorAll("li");
+
+                    tasks.forEach(function(task){
+                        if(task.style.textDecoration=="line-through"){
+                            task.remove();
+                        }
+                    });
+                }
+            </script>
+            </div>
+        </body>
+    </head>
+</html>

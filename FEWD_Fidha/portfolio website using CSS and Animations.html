@@ -1,0 +1,675 @@
+<html>
+
+<head>
+
+    <title>Resume Website</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+                         'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* HEADER */
+
+        h1 {
+            text-align: center;
+            background-color: #82a7ff;
+            color: black;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #82a7ff;
+            padding: 20px;
+        }
+
+        nav li {
+            list-style-type: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+
+        /* PERSONAL INFORMATION */
+
+        .personal {
+            background-color: #F8FAFC;
+            color: #0F172A;
+            min-height: 500px;
+            text-align: center;
+            padding: 200px 20px;
+
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .personal p {
+            margin: 10px;
+        }
+
+
+        /* CAREER */
+
+        .career {
+            background-color: #0F172A;
+            color: #F8FAFC;
+            min-height: 500px;
+            text-align: center;
+            padding: 200px 20px;
+
+            animation: slideUp 1.5s ease;
+        }
+
+        .career p {
+            max-width: 800px;
+            margin: 30px auto;
+            line-height: 1.8;
+        }
+
+
+        /* EDUCATION */
+
+        .edu {
+            background-color: #F8FAFC;
+            color: #0F172A;
+            min-height: 600px;
+            text-align: center;
+            padding: 150px 50px;
+        }
+
+        /* CSS GRID */
+
+        .parent {
+            display: grid;
+
+            grid-template-columns: repeat(2, 300px);
+
+            justify-content: center;
+
+            gap: 50px;
+
+            margin-top: 50px;
+        }
+
+
+        .box1,
+        .box2 {
+            background-color: #0F172A;
+            color: #F8FAFC;
+
+            width: 300px;
+            min-height: 200px;
+
+            padding: 50px 20px;
+
+            box-shadow: 2px 6px 10px black;
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .box1:hover,
+        .box2:hover {
+            transform: translateY(-10px);
+            box-shadow: 2px 12px 18px black;
+        }
+
+
+        /* SKILLS */
+
+        .skills {
+            background-color: #0F172A;
+            color: #F8FAFC;
+
+            min-height: 600px;
+
+            text-align: center;
+
+            padding: 150px 50px;
+        }
+
+        /* CSS GRID */
+
+        .parent2 {
+            display: grid;
+
+            grid-template-columns: repeat(3, 300px);
+
+            justify-content: center;
+
+            gap: 30px;
+
+            margin-top: 50px;
+        }
+
+        .box3,
+        .box4,
+        .box5 {
+
+            background-color: #F8FAFC;
+
+            color: #0F172A;
+
+            width: 300px;
+
+            min-height: 220px;
+
+            padding: 60px 20px;
+
+            box-shadow: 2px 6px 10px white;
+
+            border-radius: 10px;
+
+            border: 2px solid black;
+
+            transition: transform 0.3s ease;
+        }
+
+        .box3:hover,
+        .box4:hover,
+        .box5:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* PROJECTS */
+
+        .projects {
+            background-color: #F8FAFC;
+
+            color: #0F172A;
+
+            min-height: 600px;
+
+            text-align: center;
+
+            padding: 150px 50px;
+        }
+
+        .box6 {
+
+            background-color: #0F172A;
+
+            color: #F8FAFC;
+
+            width: 400px;
+
+            min-height: 220px;
+
+            padding: 60px 30px;
+
+            margin: 50px auto;
+
+            box-shadow: 2px 6px 10px black;
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .box6:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 2px 12px 18px black;
+        }
+
+        .box6 p {
+            margin: 15px;
+        }
+
+
+        /* ACHIEVEMENTS */
+
+        .ach {
+
+            background-color: #0F172A;
+
+            color: #F8FAFC;
+
+            min-height: 600px;
+
+            text-align: center;
+
+            padding: 150px 50px;
+        }
+
+        .box7 {
+
+            background-color: #F8FAFC;
+
+            color: #0F172A;
+
+            width: 600px;
+
+            min-height: 250px;
+
+            padding: 50px 30px;
+
+            border: 2px solid black;
+
+            box-shadow: 2px 6px 10px white;
+
+            border-radius: 10px;
+
+            text-align: left;
+
+            margin: 50px auto;
+
+            transition: transform 0.3s ease;
+        }
+
+        .box7:hover {
+
+            transform: scale(1.03);
+        }
+
+        .box7 p {
+            margin: 15px 0;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+
+            background-color: #F8FAFC;
+
+            color: #0F172A;
+
+            min-height: 600px;
+
+            text-align: center;
+
+            padding: 150px 50px;
+        }
+
+        .box8 {
+
+            background-color: #0F172A;
+
+            color: #F8FAFC;
+
+            width: 350px;
+
+            min-height: 220px;
+
+            padding: 40px 20px;
+
+            margin: 70px auto;
+
+            box-shadow: 2px 6px 10px black;
+
+            border-radius: 10px;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .box8:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 2px 12px 18px black;
+        }
+
+        .box8 p {
+            margin: 12px;
+        }
+
+
+        /* ========================= */
+        /* CSS ANIMATIONS */
+        /* ========================= */
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes slideUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* HEADING ANIMATION */
+
+        h2 {
+
+            animation: headingAnimation 1s ease;
+        }
+
+        @keyframes headingAnimation {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .parent {
+                grid-template-columns: 1fr;
+            }
+
+            .parent2 {
+                grid-template-columns: 1fr;
+            }
+
+            .box1,
+            .box2,
+            .box3,
+            .box4,
+            .box5,
+            .box6,
+            .box7,
+            .box8 {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .career p {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Resume Website</h1>
+
+        <nav>
+
+            <li>
+                <a href="#p">Personal Information</a>
+            </li>
+
+            <li>
+                <a href="#c">Career Objective</a>
+            </li>
+
+            <li>
+                <a href="#e">Education</a>
+            </li>
+
+            <li>
+                <a href="#s">Skills</a>
+            </li>
+
+            <li>
+                <a href="#pr">Projects</a>
+            </li>
+
+            <li>
+                <a href="#a">Achievements</a>
+            </li>
+
+            <li>
+                <a href="#co">Contact Details</a>
+            </li>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PERSONAL INFORMATION -->
+
+    <section class="personal" id="p">
+
+        <h2>PERSONAL INFORMATION</h2>
+
+        <p>Name: Fidha</p>
+
+        <p>Email: xyz@gmail.com</p>
+
+        <p>Phone no: #########9</p>
+
+    </section>
+
+
+    <!-- CAREER OBJECTIVE -->
+
+    <section class="career" id="c">
+
+        <h2>CAREER OBJECTIVE</h2>
+
+        <p>
+            A BCA (Hons. Game Development) 2nd year student
+            studying at Alliance University. I have knowledge
+            in Figma, front-end development and 3D designing
+            in Blender. I aspire to be a Game Developer.
+        </p>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="edu" id="e">
+
+        <h2>EDUCATION</h2>
+
+        <div class="parent">
+
+            <div class="box1">
+
+                <h3>HIGH SCHOOL</h3>
+
+                <p>
+                    International Indian School,
+                    Jeddah, Saudi Arabia
+                </p>
+
+                <p>12th (Commerce): 91%</p>
+
+            </div>
+
+
+            <div class="box2">
+
+                <h3>UNIVERSITY</h3>
+
+                <p>Alliance University</p>
+
+                <p>2nd Semester SGPA: 9.7</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="s">
+
+        <h2>TECHNICAL SKILLS</h2>
+
+        <div class="parent2">
+
+            <div class="box3">
+
+                <p>PROGRAMMING LANGUAGES:</p>
+
+                <p>Python</p>
+
+                <p>Java</p>
+
+                <p>HTML</p>
+
+            </div>
+
+
+            <div class="box4">
+
+                <p>UI/UX DESIGNING:</p>
+
+                <p>Figma</p>
+
+            </div>
+
+
+            <div class="box5">
+
+                <p>DATA ANALYTICS:</p>
+
+                <p>Power BI</p>
+
+                <p>Excel</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="pr">
+
+        <h2>PROJECTS</h2>
+
+        <div class="box6">
+
+            <p>UI/UX design of a pet companion app</p>
+
+            <p>UI/UX design of a restaurant</p>
+
+            <p>UI/UX design of a Streaming platform</p>
+
+            <p>UI/UX design of a Game</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <section class="ach" id="a">
+
+        <h2>ACHIEVEMENTS</h2>
+
+        <div class="box7">
+
+            <p>1M1B Internship Participant</p>
+
+            <p>
+                Developed academic and personal projects
+                in Game Development, Web Development, and UI/UX
+            </p>
+
+            <p>
+                Created 3D assets and textures using Blender
+            </p>
+
+            <p>
+                Designed UI/UX prototypes using Figma
+            </p>
+
+            <p>
+                Developed applications using Java,
+                Spring Boot, and MySQL
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT DETAILS -->
+
+    <section class="contact" id="co">
+
+        <h2>CONTACT DETAILS</h2>
+
+        <div class="box8">
+
+            <p>Email: abc@gmail.com</p>
+
+            <p>Phone: +91 XXXXX XXXXX</p>
+
+            <p>Location: Bangalore, Karnataka</p>
+
+            <p>LinkedIn: linkedin.com</p>
+
+            <p>GitHub: github.com</p>
+
+            <p>Portfolio: portfolio.com</p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<html>
+    <title>
+        Student Result Dashboard
+    </title>
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #def1ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: black;
+            color: white;
+            height: 60px;
+            padding-top: 20px;
+        }
+
+        form {
+            width: 450px;
+            margin:auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+            text-align: center;
+        }
+
+        label {
+            display:inline-block;
+            width: 170px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #para {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: lightskyblue;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        #para h1 {
+            height: auto;
+            padding: 10px;
+            font-size: 22px;
+        }
+    </style>
+
+    <body>
+        <h1>Student Result Dashboard</h1>
+        <form>
+            <label>Student Name: </label>
+            <input type="text" name="sname" id="v1"> <br> <br>
+
+            <label>Student Reg. No.: </label>
+            <input type="number" name="sreg" id="v2"> <br> <br>
+
+            <label>HTML Marks: </label>
+            <input type="number" name="htmlm" id="v3"> <br> <br>
+
+            <label>CSS Marks: </label>
+            <input type="number" name="cssm" id="v4"> <br> <br>
+
+            <label>Js Marks: </label>
+            <input type="number" name="jsm" id="v5"> <br> <br>
+
+            <button type="button" onclick="Check()">Results</button>
+
+            <p id="para">Results: </p>
+
+            <script>
+                function Check(){
+                    let sname= document.getElementById('v1').value;
+                    let sreg= document.getElementById('v2').value;
+                    let htmlm=Number(document.getElementById('v3').value);
+                    let cssm=Number(document.getElementById('v4').value);
+                    let jsm=Number(document.getElementById('v5').value);
+                    
+
+                    let total= htmlm+cssm+jsm;
+                    let percentage= total/3;
+                    let grade;
+
+                    if (percentage>=80){
+                        grade="A";
+                    }else if (percentage >=60){
+                        grade="B";
+                    }else if (percentage >=40){
+                        grade="C";
+                    }else if (percentage <40){
+                        grade="D";
+                    }
+
+                    let status;
+                    if(percentage >40){
+                        status="PASS";
+                    }else{
+                        status="FAIL";
+                    }
+
+                    document.getElementById('para').innerHTML=
+                    "<h1> Student Details</h1>"+"<br>"+ 
+                    "Student Name: "+ sname+"<br>"+
+                    "Student Registeration Number: "+ sreg+"<br>"+
+                    "Student HTML Marks: "+htmlm+"<br>"+
+                    "Student CSS Marks: "+cssm+"<br>"+
+                    "Student JS Marks: "+jsm+"<br>"+
+                    "Student Total Marks: "+total+"<br>"+
+                    "Student Percentage Marks: "+percentage+"<br>"+
+                    "Student Grade: "+grade+"<br>"+
+                    "Student Status: "+status+"<br>"
+                    ;
+
+                }
+                    
+            </script>
+
+        </form>
+    </body>
+</html>
